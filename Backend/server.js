@@ -3,9 +3,30 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const userRoute = require("./routes/userRoute");
+const errorHandler = require("./middleWare/errorMiddleware");
+const cookieParser = require("cookie-parser");
 
 const app = express()
 
+//middle
+app.use(express.json())
+app.use(cookieParser())
+app.use(express.urlencoded({extended: false}))
+app.use(bodyParser.json())
+
+//routes middle
+app.use("/api/users", userRoute)
+
+//Routes
+app.get("/", (req, res) => {
+    res.send("Home Page");
+})
+
+//Error Middleware
+app.use(errorHandler)
+
+//connect database
 const PORT = process.env.PORT || 5000;
 
 mongoose
