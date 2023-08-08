@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const tokenSchema = monoose.Schema({
+const tokenSchema = mongoose.Schema({
     userId: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,
@@ -11,11 +11,11 @@ const tokenSchema = monoose.Schema({
         required: true,
     },
     createdAt: {
-        type: Data,
+        type: Date,
         required: true,
     },
     expiresAt: {
-        type: Data,
+        type: Date,
         required: true,
     },
 })
