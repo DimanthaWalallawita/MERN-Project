@@ -29,13 +29,13 @@ const userSchema = mongoose.Schema(
     photo: {
       type: String,
       required: [true, "Please add a photo"],
-      default: "https://i.ibb.co/4pDNDk1/avatar.png",
+      default: "https://ibb.co/M6qjQ8J",
     },
     phone: {
       type: String,
-      default: "+234",
+      default: "+94",
     },
-    
+
     bio: {
       type: String,
       maxLength: [250, "Bio must not be more than 250 characters"],
