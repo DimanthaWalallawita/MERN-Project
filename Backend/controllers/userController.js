@@ -5,6 +5,7 @@ const bcrypt = require("bcryptjs");
 const Token = require("../models/tokenModel");
 const crypto = require("crypto");
 const sendEmail = require("../utils/sendEmail");
+const Job = require("../models/jobModel");
 
 // Generate Token
 const generateToken = (id) => {
@@ -16,7 +17,7 @@ const registerUser = asyncHandler(async (req, res) => {
   const { name, email, password } = req.body;
 
   // Validation
-  if (!name || !email || !password) {
+  if (!name || !email || !password ) {
     res.status(400);
     throw new Error("Please fill in all required fields");
   }
@@ -314,6 +315,45 @@ const resetPassword = asyncHandler(async (req, res) => {
   });
 });
 
+// Creating Job
+const createjob = asyncHandler(async (req, res) => {
+  const { title, comments, photo, item, critical, createdAt } = req.body;
+
+  // Validation
+  if (!title || !comments || !photo || !item || !critical ) {
+    res.status(400);
+    throw new Error("Please fill in all required fields");
+  }
+
+  createdAt = Date();
+
+  // Create new job
+  const job = await Job.create({
+    title,
+    comments,
+    photo,
+    item,
+    critical,
+    createdAt,
+  });
+
+  if (job) {
+    const { _id, title, comments, photo, item, critical, createdAt } = job;
+    res.status(201).json({
+      _id,
+      title,
+      comments,
+      photo,
+      item,
+      critical,
+      createdAt,
+    });
+  } else {
+    res.status(400);
+    throw new Error("Something Wrong with job info");
+  }
+});
+
 module.exports = {
   registerUser,
   loginUser,
@@ -324,4 +364,5 @@ module.exports = {
   changePassword,
   forgotPassword,
   resetPassword,
+  createjob,
 };
