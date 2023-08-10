@@ -317,7 +317,7 @@ const resetPassword = asyncHandler(async (req, res) => {
 
 // Creating Job
 const createjob = asyncHandler(async (req, res) => {
-  const { title, comments, photo, item, critical, createdAt } = req.body;
+  const { title, comments, photo, item, critical } = req.body;
 
   // Validation
   if (!title || !comments || !photo || !item || !critical ) {
@@ -326,9 +326,11 @@ const createjob = asyncHandler(async (req, res) => {
   }
 
   createdAt = Date();
+  const jid = user._id;
 
   // Create new job
   const job = await Job.create({
+    jid,
     title,
     comments,
     photo,
@@ -338,9 +340,9 @@ const createjob = asyncHandler(async (req, res) => {
   });
 
   if (job) {
-    const { _id, title, comments, photo, item, critical, createdAt } = job;
+    const { jid, title, comments, photo, item, critical, createdAt } = job;
     res.status(201).json({
-      _id,
+      jid,
       title,
       comments,
       photo,
