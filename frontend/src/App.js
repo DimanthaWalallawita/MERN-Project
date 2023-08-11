@@ -1,14 +1,18 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Home from "./pages/home/Home";
-import React from "react";
-import Navbar from "./components/Navbar";
+import React from 'react';
+import "./App.css"
+import {BrowserRouter,Routes,Route} from "react-router-dom";
+import {LoginPage,SignupPage} from "./Routes.js"
 
-function App() {
+const App = () => {
   return (
-    <React.Fragment>
-      <Navbar/>
-    </React.Fragment>
-  );
+    <BrowserRouter>
+      <Routes>
+        <Route path='/login' element={<LoginPage/>}/>
+        <Route path='/sign-up' element={<SignupPage/>}/>
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
+
