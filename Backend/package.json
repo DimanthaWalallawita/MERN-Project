@@ -25,6 +25,7 @@
     "nodemailer": "^6.9.4",
     "nodemon": "^3.0.1",
     "react-redux": "^8.1.2"
+    
   },
   "description": ""
 }
