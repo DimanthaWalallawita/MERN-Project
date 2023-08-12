@@ -25,12 +25,6 @@ const userSchema = mongoose.Schema(
       minLength: [6, "Password must be up to 6 characters"],
       //   maxLength: [23, "Password must not be more than 23 characters"],
     },
-
-    photo: {
-      type: String,
-      required: [true, "Please add a photo"],
-      default: "https://ibb.co/M6qjQ8J",
-    },
     
     phone: {
       type: String,

@@ -14,6 +14,12 @@ app.use(express.json())
 app.use(cookieParser())
 app.use(express.urlencoded({extended: false}))
 app.use(bodyParser.json())
+app.use(
+    cors({
+      origin: ["http://localhost:5000"],
+      credentials: true,
+    })
+  );
 
 //routes middle
 app.use("/api/users", userRoute)
@@ -38,3 +44,5 @@ mongoose
         })
     })
     .catch((err) => console.log(err))
+
+    
