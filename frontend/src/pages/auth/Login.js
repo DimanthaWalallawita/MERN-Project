@@ -1,44 +1,27 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import "./loginform.css";
 import icon from "../../assets/login.png"
 import axios from "axios"
 
 const Login = () => {
+
+  const navigate = useNavigate()
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const submit = async () => {
-    try{
-      const response = await axios.post('http://localhost:5000/api/users/login',{
-        email,
-        password
-      });
+  const submit = async (e) => {
 
-      if(response.data.token){
-        localStorage.setItem('/register');
-      }
-    }
-    catch(error){
+    e.preventDefault();
+    try {
+      await axios.post('http://localhost:8000/api/users/login', { email, password });
+      navigate("/profile");
+
+    } catch (error) {
       console.error(error);
+      alert('Login failed');
     }
   }
-
-  /*async function submit(e){
-    e.preventDefault();
-
-    try {
-
-      await axios.post("http://localhost:5000/api/users/login",{
-        email,password
-      });
-
-    } catch (e) {
-
-      console.log(e);
-      
-    }
-  }*/
 
   return(
     

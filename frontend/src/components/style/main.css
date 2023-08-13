@@ -97,7 +97,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 1px 80px;
-  background: rgb(0, 0, 68);
+  background: #000044;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
   z-index: 999;
   position: sticky;
@@ -115,6 +115,7 @@ body {
   list-style: none;
   padding: 0 20px;
   position: relative;
+  cursor: pointer;
 }
 
 #navbar li a{
@@ -123,6 +124,7 @@ body {
   font-weight: 600;
   color: rgb(255, 255, 255);
   transition: 0.3 ease;
+  cursor: pointer;
 }
 
 #navbar li a:hover,
@@ -157,6 +159,19 @@ body {
   width: 100%;
   background-size: cover;
   background-position: top 25% right 0;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#banner{
+  background-image: url("../../assets/23147105163.png");
+  height: 90vh;
+  width: 100%;
+  background-size: cover;
+  background-position: top 25% right 0.1;
   padding: 0 80px;
   display: flex;
   flex-direction: column;

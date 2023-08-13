@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import "./loginform.css";
 import icon from "../../assets/images-removebg-preview.png"
 import axios from "axios";
 
 const Register = () => {
+
+    const navigate = useNavigate()
 
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");
@@ -14,20 +16,22 @@ const Register = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const config = {headers: {"Content-Type":"multipart/form-data"}};
-        const newForm = new FormData();
 
-        newForm.append("name",name);
-        newForm.append("email",email);
-        newForm.append("password",password);
-        newForm.append("phone",phone);
-        newForm.append("bio",bio);
+        try {
+            await axios.post('http://localhost:8000/api/users/register', {
+              name,
+              email,
+              password,
+              phone,
+              bio,
+            });
+            alert('Registration successful');
+            navigate("/login");
 
-        axios.post("http://localhost:5000/api/users/register", newForm, config).then((res) => {
-            console.log(res)
-        }).catch((err) => {
-            console.log(err);
-        })
+          } catch (error) {
+            console.error(error);
+            alert('Registration failed');
+          }
     }
 
 

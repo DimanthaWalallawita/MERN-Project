@@ -1,9 +1,6 @@
 import React from 'react';
 import "../style/main.css";
-import {Link,NavLink,useNavigate} from "react-router-dom";
-
-
-const activeLink = ({isActive}) => (isActive ? "active" : "");
+import {useNavigate} from "react-router-dom";
 
 const Header = () => {
 
@@ -20,7 +17,7 @@ const Header = () => {
   return (
 
     <section id="header">
-        <a href="#"><img src="" class="logo" alt=""/></a>
+        <p>JOBMANAGMENT</p>
 
         <div>
             <ul id="navbar">
