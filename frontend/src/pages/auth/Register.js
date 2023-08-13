@@ -30,9 +30,6 @@ const Register = () => {
         })
     }
 
-    const handleFileInputChange = () => {
-        console.log();
-    }
 
   return(
     

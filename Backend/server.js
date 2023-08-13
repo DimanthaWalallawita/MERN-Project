@@ -33,7 +33,7 @@ app.get("/", (req, res) => {
 app.use(errorHandler)
 
 //connect database
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8000;
 
 mongoose
     .connect(process.env.MONGO_URI)
