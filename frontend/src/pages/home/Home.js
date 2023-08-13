@@ -27,7 +27,7 @@ const Home = () => {
               <button className="--btn --btn-danger"><a href="/register">Register</a>
               </button>
 
-              <button className="--btn --btn-primary" ><a href="/login">Log In</a>
+              <button className="--btn --btn-primary" ><a href="/login">LogIn</a>
               </button>
             </div>
 
