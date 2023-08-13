@@ -32,42 +32,6 @@ const Header = () => {
             <i id="bar" class="fa fa-outdent"></i>
         </div>
     </section>
-
-    /*<header className="header">
-        <nav>
-            <div className="logo" onClick={goHome}>
-                <BiLogIn size={35}/>
-                <span>JOB-Managment</span>
-            </div>
-            <ul className="home-links">
-                <li className="--flex-center">
-                    <FaUserCircle size={20}/>
-
-                    <p className="--color-white">
-                        Hi Dimantha
-                    </p>
-                </li>
-                <li>
-                    <button className="btn">
-                        <Link to="/login">Login</Link>
-                    </button>
-                </li>
-                
-                <li>
-                    
-                <NavLink to="/profile" className={activeLink}>Profile</NavLink>
-                    
-                </li>
-
-                <li>
-                    <button className="nav-close-btn">
-                        Logout
-                    </button>
-                </li>
-            </ul>
-        </nav>
-    </header>
-  */
   )
 }
 
