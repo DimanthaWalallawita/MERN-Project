@@ -1,0 +1,166 @@
+@charset "utf-8";
+.container-fluid {
+	background-image: -webkit-linear-gradient(270deg,rgba(0,0,0,1.00) 0%,rgba(255,255,255,1.00) 26.74%,rgba(255,255,255,1.00) 64.87%,rgba(0,0,0,1.00) 100%,rgba(84,45,1,1.00) 100%);
+	background-image: -moz-linear-gradient(270deg,rgba(0,0,0,1.00) 0%,rgba(255,255,255,1.00) 26.74%,rgba(255,255,255,1.00) 64.87%,rgba(0,0,0,1.00) 100%,rgba(84,45,1,1.00) 100%);
+	background-image: -o-linear-gradient(270deg,rgba(0,0,0,1.00) 0%,rgba(255,255,255,1.00) 26.74%,rgba(255,255,255,1.00) 64.87%,rgba(0,0,0,1.00) 100%,rgba(84,45,1,1.00) 100%);
+	background-image: linear-gradient(180deg,rgba(0,0,0,1.00) 0.00%,rgba(255,255,255,1.00) 26.74%,rgba(255,255,255,1.00) 64.87%,rgba(0,0,0,1.00) 100.00%,rgba(84,45,1,1.00) 100%);
+}
+.container-fluid .container .navbar.navbar-expand-lg.navbar-light.bg-light {
+	background-image: -webkit-linear-gradient(270deg,rgba(0,0,0,1.00) 63.01%,rgba(32,32,32,1.00) 100%);
+	background-image: -moz-linear-gradient(270deg,rgba(0,0,0,1.00) 63.01%,rgba(32,32,32,1.00) 100%);
+	background-image: -o-linear-gradient(270deg,rgba(0,0,0,1.00) 63.01%,rgba(32,32,32,1.00) 100%);
+	background-image: linear-gradient(180deg,rgba(0,0,0,1.00) 63.01%,rgba(32,32,32,1.00) 100%);
+}
+.container .navbar.navbar-expand-lg.navbar-light.bg-light .nav-link {
+	color: blue;
+}
+.container-fluid .container footer {
+	color: #FFFFFF;
+}
+
+.card.col-md-4.col-lg-12 .card-body .btn.btn-primary {
+	background-color: blue;
+}
+#accordion1 .card #headingOne1 {
+	background-color: black;
+}
+#accordion1 .card #headingTwo1 {
+	background-color: Black;
+}
+#accordion1 .card #headingThree1 {
+	background-color: Black;
+	color: #F8F7F7;
+}
+#headingThree1 .mb-0 .collapsed {
+	color: #FFFFFF;
+}
+#headingTwo1 .mb-0 .collapsed {
+	color: #FFFFFF;
+}
+#headingOne1 .mb-0 a {
+	color: #FFFFFF;
+}
+.container .row .col-lg-3 {
+	color: #FFFDFD;
+}
+.container .row .col-lg-6.offset-lg-0 {
+	color: #FFFFFF;
+}
+.col-lg-4 .card.col-md-4.col-lg-12 .btn.btn-primary {
+	background-color: #5C3500;
+}
+.container-fluid .container .btn.btn-lg {
+	background-color: darkblue;
+	color: #FFFFFF;
+}
+.container #carouselExampleIndicators1 .carousel-inner {
+    height: 500px;
+
+}
+.container-fluid .container .text-center {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+    font-style: normal;
+}
+.container-fluid .container .text-center {
+    color: #834400;
+}
+.container-fluid .container .text-center {
+    color: black;
+}
+.row .col-lg-6 a {
+    color: #000000;
+}
+.row .col-lg-3 a {
+    color: #020202;
+}
+.container-fluid .container a {
+    color: #FCF8F8;
+}
+table tr td {
+    font-style: normal;
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+    color: #ffffff;
+}
+table{
+	background-color: rgb(255, 255, 255);
+    position: relative;
+}
+
+.main-section{
+	width:100%;
+	margin:0 auto;
+	text-align: center;
+	padding: 0px 5px;
+}
+.dashbord{
+	width:32%;
+	display: inline-block;
+	background-color:black;
+	color:#fff;
+	margin-top: 15vh; 
+    margin-bottom: 15vh;
+}
+.icon-section i{
+	font-size: 30px;
+	padding:10px;
+	border:1px solid #fff;
+	border-radius:50%;
+	margin-top:-25px;
+	margin-bottom: 10px;
+	background-color:black;
+}
+.icon-section p{
+	margin:0px;
+	font-size: 18px;
+	padding-bottom: 10px;
+}
+.detail-section{
+	background-color: darkblue;
+	padding: 5px 0px;
+}
+.dashbord .detail-section:hover{
+	background-color: #5a5a5a;
+	cursor: pointer;
+}
+.detail-section a{
+
+	text-decoration: none;
+	  display: block;
+  
+  text-align: center;
+  color:cornsilk;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family:Arial, Helvetica, sans-serif;
+}
+.dashbord-green .icon-section,.dashbord-green .icon-section i{
+	background-color: black;
+}
+.dashbord-green .detail-section{
+	background-color: darkblue;
+}
+.dashbord-orange .icon-section,.dashbord-orange .icon-section i{
+	background-color: black;
+}
+.dashbord-orange .detail-section{
+	background-color: darkblue;
+}
+.dashbord-blue .icon-section,.dashbord-blue .icon-section i{
+	background-color: black;
+}
+.dashbord-blue .detail-section{
+	background-color:darkblue;
+}
+.dashbord-red .icon-section,.dashbord-red .icon-section i{
+	background-color:black;
+}
+.dashbord-red .detail-section{
+	background-color:darkblue;
+}
+.dashbord-skyblue .icon-section,.dashbord-skyblue .icon-section i{
+	background-color:black;
+}
+.dashbord-skyblue .detail-section{
+	background-color:darkblue;
+}
+

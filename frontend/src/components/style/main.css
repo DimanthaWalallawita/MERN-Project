@@ -169,9 +169,9 @@ body {
 #banner{
   background-image: url("../../assets/23147105163.png");
   height: 90vh;
-  width: 100%;
+  width: auto;
   background-size: cover;
-  background-position: top 25% right 0.1;
+  background-position: top 15% right 0.1;
   padding: 0 80px;
   display: flex;
   flex-direction: column;
