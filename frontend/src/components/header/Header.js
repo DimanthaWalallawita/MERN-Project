@@ -9,8 +9,12 @@ const Header = () => {
 
     const navigate = useNavigate()
 
-    const goHome = () => {
-        navigate("/")
+    const goLogin = () => {
+        navigate("/login")
+    }
+
+    const goRegister = () => {
+        navigate("/register")
     }
 
   return (
@@ -21,8 +25,8 @@ const Header = () => {
         <div>
             <ul id="navbar">
                 <li><a className="active" href="/">Home</a></li>
-                <li><a href="/register">Register</a></li>
-                <li><a href="/login">Login</a></li>
+                <li onClick={goRegister}><a>Register</a></li>
+                <li onClick={goLogin}><a>Login</a></li>
             </ul>
         </div>
 

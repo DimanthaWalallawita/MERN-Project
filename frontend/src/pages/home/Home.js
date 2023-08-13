@@ -2,8 +2,19 @@ import React from 'react'
 import Header from '../../components/header/Header'
 import Footer from '../../components/footer/Footer'
 import "../../components/style/main.css";
+import { useNavigate } from 'react-router';
 
 const Home = () => {
+
+  const navigate = useNavigate()
+
+    const goLogin = () => {
+        navigate("/login")
+    }
+
+    const goRegister = () => {
+        navigate("/register")
+    }
 
   return (
     <div>
@@ -24,10 +35,12 @@ const Home = () => {
             <br />
 
             <div className="hero-button --flex-start">
-              <button className="--btn --btn-danger"><a href="/register">Register</a>
+              <button className="--btn --btn-danger" onClick={goRegister}>
+                Register
               </button>
 
-              <button className="--btn --btn-primary" ><a href="/login">LogIn</a>
+              <button className="--btn --btn-primary" onClick={goLogin}>
+                LogIn
               </button>
             </div>
 
